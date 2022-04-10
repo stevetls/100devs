@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Title in the tab</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<label for="inputTemp">Temperature</label>
+		<input id="inputTemp" placeholder="enter the temperture" type="number" autofocus>
+
+		<input type="radio" id="CtoF" value="CtoF" name="tempMetric" checked>
+		<label for="CtoF">&#8451; to &#8457;</label>
+		<input type="radio" id="FtoC" value="FtoC" name="tempMetric">
+		<label for="FtoF">&#8451; to &#8457;</label>
+
+		<button id="convert">Convert</button>
+		<h4 id="outputTemp"></h4>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

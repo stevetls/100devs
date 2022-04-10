@@ -1,0 +1,244 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h1{
+  font-size: 2rem;
+  border-left: 3px solid red;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  background-color: black;
+  height: 40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+a:link{
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+nav{
+  margin: auto;
+  width: 90%;
+  background: black;
+  color: white;
+}
+
+nav ul li{
+  float:left;
+  list-style: none;
+  width: 7%;
+  border-left: 1px solid grey;
+  height:40px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+ul form li{
+  padding-top: 08px;
+}
+
+ul form input{
+  float: left;
+  width:200px;
+  border-left: 1px solid grey;
+  margin-left:10px;
+  height: 25px;
+}
+
+nav img{
+  float:left;
+  width: 100px;
+}
+
+.container{
+  max-width: 1300px;
+  margin: 20px auto;
+}
+
+main h2{
+  float: left;
+  width: 50%;
+}
+
+main time{
+  float: right;
+  width:50%;
+  padding-top:5px;
+  text-align:right;
+}
+
+.headSection{
+  width:90%;
+}
+
+.secondarynews{
+  width:50%;
+}
+
+.headnews{
+  width: 50%;
+  float: left;
+  position: relative;
+  text-align:left;
+}
+
+.headnews > h1{
+  color: white;
+  font-size: 1.8rem;
+  margin: 12px;
+  position: absolute;
+  bottom: 80px;
+}
+
+.headnews > p{
+  color: lightgray;
+  font-size: 1rem;
+  margin: 12px;
+  line-height: 1.3rem;
+  position: absolute;
+  bottom: 30px;
+}
+
+.headnews > span{
+  color: lightgray;
+  display:block;
+  font-size: 1rem;
+  margin: 12px;
+  padding-left: 10px;
+  border-left: 3px solid red; 
+  position: absolute;
+  bottom: 10px;
+}
+
+.headnews-sm{
+  width:50%;
+  float:left;
+  position: relative;
+  text-align: left;
+}
+
+.headimage{
+  width: 98%;
+  position: relative;
+}
+
+.secondaryimage{
+  width: 96%;
+  margin-top:2px;
+}
+
+.headnews-sm > h4{
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 12px;
+  position: absolute;
+  bottom: 40px;
+  display: block;
+}
+
+.headnews-sm > span{
+  color: lightgray;
+  font-size: 1rem;
+  position:absolute;
+  padding-left: 10px;
+  border-left: 3px solid red; 
+  margin: 12px;
+  bottom: 10px;
+  display: block;
+}
+
+.footerNews{
+  width: 33%;
+  float:left;
+  margin-top: 10px;
+}
+
+.footerImage{
+  width:98%;
+}
+
+.footerNews > h4{
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 12px;
+}
+
+.footerNews > p{
+  font-size: 1rem;
+  margin: 12px;
+  line-height: 1.2rem;
+}
+
+.footerNews > span{
+  font-size: 1rem;
+  margin: 12px;
+  border-left: 3px solid red;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 1000px){
+  .secondaryNav{
+    display:none;
+  }
+  nav ul li{
+    width: 10%;
+  }
+  ul form input{
+    width: 150px;
+  }
+}
+
+@media screen and (max-width:800px){
+  .headnews{
+    width: 100%;
+  }
+  .thirdNav{
+    display:none;
+  }
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

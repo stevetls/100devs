@@ -1,0 +1,29 @@
+*{
+    box-sizing:border-box;
+}
+
+header,footer{
+    height:100px;
+    border: 1px solid grey;
+    clear:both;
+}
+
+.col1-5{
+    float:left;
+    width: 20%;
+    height: 500px;
+    border: 1px solid grey;
+}
+
+.col2-5{
+    float:left;
+    width: 40%;
+    height: 500px;
+    border: 1px solid grey;
+}
+
+@media (max-width:1000px){
+    .col1-5, .col2-5{
+        width:100%;
+    }
+}
