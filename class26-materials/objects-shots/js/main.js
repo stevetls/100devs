@@ -18,7 +18,10 @@ function cocktailInfo(){
         
         data.drinks.forEach(drink => {
             let li = document.createElement('li')
-            document.querySelector('ul').appendChild(li).innerText = drink.strDrink
+            li.innerText = drink.strDrink
+            let image =  document.createElement('img')
+            image.src = drink.strDrinkThumb
+            document.querySelector('ul').append(image, li)
             })
         document.querySelector('img').src = data.drinks[0].strDrinkThumb
         document.querySelector('h3').innerText = data.drinks[0].strInstructions
