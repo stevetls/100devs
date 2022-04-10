@@ -13,11 +13,16 @@ function cocktailInfo(){
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data.drinks[0])
-        document.querySelector('h2').innerText = data.drinks[0].strDrink
+        console.log(data.drinks)
+        
+        
+        data.drinks.forEach(drink => {
+            let li = document.createElement('li')
+            document.querySelector('ul').appendChild(li).innerText = drink.strDrink
+            })
         document.querySelector('img').src = data.drinks[0].strDrinkThumb
-        document.querySelector('h3').innerText =data.drinks[0].strInstructions
-    })  
+        document.querySelector('h3').innerText = data.drinks[0].strInstructions
+    })
     .catch(err => {
         console.log(`error ${err}`)
     })
