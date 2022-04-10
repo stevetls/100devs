@@ -1,7 +1,16 @@
 //The user will enter a cocktail. Get a cocktail name, photo, and instructions and place them in the DOM
+document.querySelector('button').addEventListener('click', cocktailInfo)
+document.querySelector('input').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      cocktailInfo()
+    }
+});
+
+function cocktailInfo(){
+    let cocktail = document.querySelector('input').value.replace(' ', '+')
 
 
-fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`)
     .then(res => res.json())
     .then(data => {
         console.log(data.drinks[0])
@@ -12,3 +21,4 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
     .catch(err => {
         console.log(`error ${err}`)
     })
+}
