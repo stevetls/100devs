@@ -37,7 +37,11 @@ function cocktailList(){
             let li = document.createElement('li')
             let cocktailName =  document.createElement('h4')
             cocktailName.innerText = drink.strDrink
-            li.append(image, cocktailName)
+
+            let instruction =  document.createElement('p')
+            instruction.innerText = drink.strInstructions
+
+            li.append(cocktailName, image, instruction)
             li.id = drink.idDrink
             document.querySelector('ul').append(li)
 
