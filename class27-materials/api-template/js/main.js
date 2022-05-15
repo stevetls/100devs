@@ -15,3 +15,11 @@ function getFetch(){
       });
 }
 
+function fetchNasaPicture(){
+  const api = 8ccLIAP1ucyxccbGlDl94loIwOWgDuip4e1TTpiI
+  const url = 'https://api.nasa.gov/planetary/apod?api_key='+api
+
+  fetch(url)
+  
+
+}
