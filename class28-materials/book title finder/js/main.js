@@ -12,8 +12,8 @@ function getFetch(){
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        console.log(data[ISBN:${isbn}].details)
-        localStorage.setItem('books', data[ISBN:${isbn}].details.title)
+        console.log(data[`ISBN:${isbn}`].details)
+        localStorage.setItem('books', data[`ISBN:${isbn}`].details.title)
         document.querySelector('h3').innerText = localStorage.getItem('books')
 
       })
