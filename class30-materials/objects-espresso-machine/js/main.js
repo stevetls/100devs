@@ -18,4 +18,4 @@ class EspressoMachine{
         }
     }
 
-let gaggia = new EspressoMachine('red', 'Gaggia', 'Classic Pro', 400)
+let gaggia = new EspressoMachine('red', 'Gaggia', 'Classic Pro', 400) 
